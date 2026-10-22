@@ -1,0 +1,39 @@
+info:
+  name: Path schema.example array
+  type: http
+  seq: 4
+  tags:
+    - Serialization
+
+http:
+  method: GET
+  url: "{{baseUrl}}/path/schema-example/:ids"
+  params:
+    - name: ids
+      value: 7,8,9
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/path/schema-example/:ids"
+      method: GET
+      params:
+        - name: ids
+          value: 7,8,9
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

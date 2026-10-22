@@ -1,0 +1,45 @@
+info:
+  name: Edge query uses the first param example
+  type: http
+  seq: 4
+  tags:
+    - Edge
+
+http:
+  method: GET
+  url: "{{baseUrl}}/edge/query-two-examples"
+  params:
+    - name: tags
+      value: foo
+      type: query
+    - name: tags
+      value: bar
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/edge/query-two-examples"
+      method: GET
+      params:
+        - name: tags
+          value: foo
+          type: query
+        - name: tags
+          value: bar
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

@@ -1,0 +1,39 @@
+info:
+  name: Primitive query parameter
+  type: http
+  seq: 19
+  tags:
+    - Serialization
+
+http:
+  method: GET
+  url: "{{baseUrl}}/primitive/query"
+  params:
+    - name: page
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/primitive/query"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

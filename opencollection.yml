@@ -1,0 +1,44 @@
+opencollection: 1.0.0
+
+info:
+  name: OpenAPI Import Export QA - 1
+
+docs:
+  content: |-
+    # OpenAPI Import Export QA
+
+    Import this file with **Import Collection → OpenAPI**, or `bru import openapi`.
+
+    ## Markdown
+
+    This description is the collection Docs check.
+
+    - **Bold** item
+    - Link: [Bruno](https://www.usebruno.com)
+    - Quote: "ticks `code` and <tag> stay intact"
+    - Characters: $^%@#^%^%$^ & <>&
+
+    ```
+    code block
+    ```
+
+    ## What to open
+
+    - TC-7580 path arrays: operationIds starting with `path`
+    - TC-7581 header arrays: operationIds starting with `header`
+    - TC-7582 query arrays: operationIds starting with `query`
+    - TC-7583 edges: operationIds starting with `edge`
+    - TC-7584 primitives: operationIds starting with `primitive`
+    - TC-4464 filenames: `filenamePeriodHealth` and `filenamePeriodReports` (summaries end with a period; the `.bru` name must not contain `..`)
+    - TC-4463 docs: this description, tags Users / Orders / Edge, and the operation descriptions on `docsUsers` and `docsOrders`
+
+    Array parameters do not set `style` or `explode`. Path and header arrays should be one comma-joined value. Query arrays should be one enabled row per item.
+
+    The long paragraph below is for the large-description check. Import must keep the full text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Repeated so the Docs tab has a long block to scroll: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  type: text/markdown
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

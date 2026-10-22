@@ -1,0 +1,17 @@
+info:
+  name: Users
+  type: folder
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    # Users
+
+    - List users
+    - **Create** a user
+    - See [the guide](https://www.usebruno.com)
+
+    `GET /docs/users`
+  type: text/markdown

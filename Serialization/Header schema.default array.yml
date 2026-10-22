@@ -1,0 +1,37 @@
+info:
+  name: Header schema.default array
+  type: http
+  seq: 9
+  tags:
+    - Serialization
+
+http:
+  method: GET
+  url: "{{baseUrl}}/header/schema-default"
+  headers:
+    - name: X-Roles
+      value: read,write
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/header/schema-default"
+      method: GET
+      headers:
+        - name: X-Roles
+          value: read,write
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

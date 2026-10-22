@@ -1,0 +1,10 @@
+info:
+  name: Edge
+  type: folder
+
+request:
+  auth: inherit
+
+docs:
+  content: 'Edge tag: backticks `code`, quotes "quoted", HTML-like <b>text</b>, and $^%@#.'
+  type: text/markdown

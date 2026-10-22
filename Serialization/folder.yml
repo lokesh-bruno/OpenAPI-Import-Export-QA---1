@@ -1,0 +1,10 @@
+info:
+  name: Serialization
+  type: folder
+
+request:
+  auth: inherit
+
+docs:
+  content: Array parameter serialization checks for path, header, and query.
+  type: text/markdown

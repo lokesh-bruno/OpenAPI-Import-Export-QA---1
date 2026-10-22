@@ -1,0 +1,39 @@
+info:
+  name: Edge one-item query array
+  type: http
+  seq: 2
+  tags:
+    - Edge
+
+http:
+  method: GET
+  url: "{{baseUrl}}/edge/one-item-query"
+  params:
+    - name: status
+      value: active
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/edge/one-item-query"
+      method: GET
+      params:
+        - name: status
+          value: active
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

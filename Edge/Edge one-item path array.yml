@@ -1,0 +1,39 @@
+info:
+  name: Edge one-item path array
+  type: http
+  seq: 1
+  tags:
+    - Edge
+
+http:
+  method: GET
+  url: "{{baseUrl}}/edge/one-item-path/:role"
+  params:
+    - name: role
+      value: admin
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/edge/one-item-path/:role"
+      method: GET
+      params:
+        - name: role
+          value: admin
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

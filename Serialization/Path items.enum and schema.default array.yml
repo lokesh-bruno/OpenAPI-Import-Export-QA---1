@@ -1,0 +1,39 @@
+info:
+  name: Path items.enum and schema.default array
+  type: http
+  seq: 6
+  tags:
+    - Serialization
+
+http:
+  method: GET
+  url: "{{baseUrl}}/path/items-enum-default/:types"
+  params:
+    - name: types
+      value: a,b
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/path/items-enum-default/:types"
+      method: GET
+      params:
+        - name: types
+          value: a,b
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

@@ -1,0 +1,41 @@
+info:
+  name: Edge nullable optional query stays disabled
+  type: http
+  seq: 6
+  tags:
+    - Edge
+
+http:
+  method: GET
+  url: "{{baseUrl}}/edge/nullable"
+  params:
+    - name: note
+      value: ""
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/edge/nullable"
+      method: GET
+      params:
+        - name: note
+          value: ""
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

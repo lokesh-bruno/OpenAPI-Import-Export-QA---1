@@ -1,0 +1,45 @@
+info:
+  name: Query schema.default array
+  type: http
+  seq: 14
+  tags:
+    - Serialization
+
+http:
+  method: GET
+  url: "{{baseUrl}}/query/schema-default"
+  params:
+    - name: status
+      value: active
+      type: query
+    - name: status
+      value: pending
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/query/schema-default"
+      method: GET
+      params:
+        - name: status
+          value: active
+          type: query
+        - name: status
+          value: pending
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

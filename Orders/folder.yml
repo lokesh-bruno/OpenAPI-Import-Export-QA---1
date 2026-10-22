@@ -1,0 +1,10 @@
+info:
+  name: Orders
+  type: folder
+
+request:
+  auth: inherit
+
+docs:
+  content: Orders folder description. This text belongs only on the Orders folder.
+  type: text/markdown

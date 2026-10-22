@@ -1,0 +1,39 @@
+info:
+  name: Path schema.default array
+  type: http
+  seq: 3
+  tags:
+    - Serialization
+
+http:
+  method: GET
+  url: "{{baseUrl}}/path/schema-default/:roles"
+  params:
+    - name: roles
+      value: admin,user
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/path/schema-default/:roles"
+      method: GET
+      params:
+        - name: roles
+          value: admin,user
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""
