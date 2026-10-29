@@ -1,0 +1,10 @@
+apiVersion: usebruno.com/v1alpha1
+kind: Bruno
+metadata:
+  name: open-api-import-export-qa-1
+  title: OpenAPI Import Export QA - 1
+spec:
+  type: collection
+  owner: user:default/bob
+  partOf:
+    - api:default/aws-secret-manager
