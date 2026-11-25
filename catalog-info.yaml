@@ -1,0 +1,11 @@
+apiVersion: usebruno.com/v1alpha1
+kind: Bruno
+metadata:
+  name: open-api-import-export-qa-2
+  title: OpenAPI Import Export QA - 2
+spec:
+  type: collection
+  url: https://github.com/lokesh-bruno/OpenAPI-Import-Export-QA---1/tree/main
+  owner: group:default/guests
+  partOf:
+    - api:default/google-cloud-secret-manager
